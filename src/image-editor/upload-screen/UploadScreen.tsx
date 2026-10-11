@@ -41,7 +41,7 @@ export function UploadScreen({ onUpload }: Props) {
   return (
     <div>
       <div className="mb-6 space-y-2 text-center">
-        <p className="text-lg font-medium">
+        <p className="text-base font-medium md:text-lg">
           画像をアップロードすると人の顔を自動でスタンプで隠します。
         </p>
         <p className="text-muted-foreground text-sm">
