@@ -18,7 +18,7 @@ function App() {
       <main className="mx-auto flex w-full max-w-3xl flex-1 flex-col p-5">
         <ImageEditor />
       </main>
-      <footer className="flex items-center justify-center gap-4 py-6 text-sm">
+      <footer className="flex flex-wrap items-center justify-center gap-x-2 gap-y-1 px-3 py-4 text-sm md:gap-4 md:py-6">
         {/* TODO: 利用規約とプライバシーポリシーはモーダルで表示する */}
         <Button type="button" variant="link">
           利用規約
