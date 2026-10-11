@@ -10,8 +10,8 @@ function App() {
     <div className="flex min-h-svh flex-col">
       <Toaster position="top-right" />
       <header className="flex items-center justify-center gap-3">
-        <img className="size-9 shrink-0 lg:size-14" src={logo} alt="" />
-        <h1 className="my-5 text-center text-4xl font-medium tracking-tight lg:my-8 lg:text-6xl">
+        <img className="size-9 shrink-0 md:size-14" src={logo} alt="" />
+        <h1 className="my-4 text-center text-3xl font-medium tracking-tight md:my-8 md:text-6xl">
           Dog Photo Mask
         </h1>
       </header>
