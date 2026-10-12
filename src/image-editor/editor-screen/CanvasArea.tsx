@@ -49,7 +49,7 @@ export function CanvasArea({
   return (
     <div
       ref={setRef}
-      className="bg-card flex flex-1 items-center justify-center overflow-hidden"
+      className="bg-card flex flex-1 items-center justify-center"
     >
       <Stage
         width={displayImageWidth}

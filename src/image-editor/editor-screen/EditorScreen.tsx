@@ -97,7 +97,7 @@ export function EditorScreen({
   return (
     <div className="flex flex-1 flex-col">
       <div className="mb-6 text-center">
-        <p className="text-lg font-medium">
+        <p className="text-base font-medium md:text-lg">
           スタンプをドラッグして位置やサイズを調整できます。
         </p>
       </div>

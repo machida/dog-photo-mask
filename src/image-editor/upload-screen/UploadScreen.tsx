@@ -41,7 +41,7 @@ export function UploadScreen({ onUpload }: Props) {
   return (
     <div>
       <div className="mb-6 space-y-2 text-center">
-        <p className="text-lg font-medium">
+        <p className="text-base font-medium md:text-lg">
           画像をアップロードすると人の顔を自動でスタンプで隠します。
         </p>
         <p className="text-muted-foreground text-sm">
@@ -53,7 +53,7 @@ export function UploadScreen({ onUpload }: Props) {
         {...getRootProps({
           'aria-label': 'ファイルのドロップエリア',
           className: cn(
-            'flex items-center justify-center min-h-60 cursor-pointer rounded-lg border-2 border-dashed p-6 text-center transition-colors',
+            'flex min-h-52 items-center justify-center cursor-pointer rounded-lg border-2 border-dashed p-4 text-center transition-colors md:min-h-60 md:p-6',
             {
               'border-border bg-card hover:bg-muted':
                 !isFocused && !isDragActive,
@@ -65,7 +65,7 @@ export function UploadScreen({ onUpload }: Props) {
       >
         <input {...getInputProps()} />
 
-        <p>
+        <p className="text-sm md:text-base">
           ここにファイルをドラッグ&ドロップするか,
           クリックしてファイルを選択してください
         </p>
