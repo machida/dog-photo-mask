@@ -4,6 +4,7 @@ import logo from '@/assets/logo.svg';
 import { LegalDialog } from '@/components/LegalDialog.tsx';
 import { Toaster } from '@/components/ui/sonner';
 import { ImageEditor } from '@/image-editor/ImageEditor.tsx';
+import { TermsContent } from './TermsContent.tsx';
 
 function App() {
   return (
@@ -20,7 +21,7 @@ function App() {
       </main>
       <footer className="flex flex-wrap items-center justify-center gap-x-2 gap-y-1 px-3 py-4 text-sm md:gap-4 md:py-6">
         <LegalDialog title="利用規約">
-          <p>利用規約本文</p>
+          <TermsContent />
         </LegalDialog>
         <LegalDialog title="プライバシーポリシー">
           <p>プライバシーポリシー本文</p>
