@@ -4,6 +4,7 @@ import logo from '@/assets/logo.svg';
 import { LegalDialog } from '@/components/LegalDialog.tsx';
 import { Toaster } from '@/components/ui/sonner';
 import { ImageEditor } from '@/image-editor/ImageEditor.tsx';
+import { PrivacyPolicyContent } from './PrivacyPolicyContent.tsx';
 import { TermsContent } from './TermsContent.tsx';
 
 function App() {
@@ -24,7 +25,7 @@ function App() {
           <TermsContent />
         </LegalDialog>
         <LegalDialog title="プライバシーポリシー">
-          <p>プライバシーポリシー本文</p>
+          <PrivacyPolicyContent />
         </LegalDialog>
         <a
           href="https://github.com/ryufuta/dog-photo-mask"
