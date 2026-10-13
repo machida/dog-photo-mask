@@ -1,9 +1,11 @@
 import githubLogoBlack from '@/assets/github-logo-black.svg';
 import githubLogoWhite from '@/assets/github-logo-white.svg';
 import logo from '@/assets/logo.svg';
-import { Button } from '@/components/ui/button.tsx';
+import { LegalDialog } from '@/components/LegalDialog.tsx';
 import { Toaster } from '@/components/ui/sonner';
 import { ImageEditor } from '@/image-editor/ImageEditor.tsx';
+import { PrivacyPolicyContent } from './PrivacyPolicyContent.tsx';
+import { TermsContent } from './TermsContent.tsx';
 
 function App() {
   return (
@@ -19,13 +21,12 @@ function App() {
         <ImageEditor />
       </main>
       <footer className="flex flex-wrap items-center justify-center gap-x-2 gap-y-1 px-3 py-4 text-sm md:gap-4 md:py-6">
-        {/* TODO: 利用規約とプライバシーポリシーはモーダルで表示する */}
-        <Button type="button" variant="link">
-          利用規約
-        </Button>
-        <Button type="button" variant="link">
-          プライバシーポリシー
-        </Button>
+        <LegalDialog title="利用規約">
+          <TermsContent />
+        </LegalDialog>
+        <LegalDialog title="プライバシーポリシー">
+          <PrivacyPolicyContent />
+        </LegalDialog>
         <a
           href="https://github.com/ryufuta/dog-photo-mask"
           target="_blank"
