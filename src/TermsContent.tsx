@@ -1,13 +1,15 @@
 export function TermsContent() {
   return (
-    <div className="no-scrollbar -mx-4 max-h-[50vh] overflow-y-auto px-4">
-      <p>
+    <div className="no-scrollbar -mx-4 max-h-[50vh] overflow-y-auto px-4 text-sm leading-7 md:text-base">
+      <p className="mb-5">
         この利用規約（以下「本規約」といいます。）は、Dog Photo
         Mask（以下「本サービス」といいます。）の利用条件を定めるものです。本サービスを利用する方（以下「利用者」といいます。）は、本規約に同意のうえ、本サービスをご利用ください。
       </p>
 
-      <h3>第1条（本サービスの内容）</h3>
-      <ol>
+      <h3 className="mt-7 mb-3 text-lg leading-snug font-semibold">
+        第1条（本サービスの内容）
+      </h3>
+      <ol className="mb-5 list-outside list-decimal space-y-2 pl-6 marker:font-medium">
         <li>
           本サービスは、利用者が選択した画像について、画像内の人物の顔を自動検出し、スタンプを配置・編集することで、画像を加工できる
           Web アプリケーションです。
@@ -18,8 +20,10 @@ export function TermsContent() {
         <li>本サービスの利用にあたり、アカウント登録は必要ありません。</li>
       </ol>
 
-      <h3>第2条（画像の取り扱い）</h3>
-      <ol>
+      <h3 className="mt-7 mb-3 text-lg leading-snug font-semibold">
+        第2条（画像の取り扱い）
+      </h3>
+      <ol className="mb-5 list-outside list-decimal space-y-2 pl-6 marker:font-medium">
         <li>
           本サービスでは、利用者が選択した画像の読み込み、顔検出および画像加工を、利用者のブラウザ内で行います。
           <strong>画像データは本サービスのサーバーに送信されません。</strong>
@@ -32,14 +36,16 @@ export function TermsContent() {
         </li>
       </ol>
 
-      <h3>第3条（利用条件および禁止事項）</h3>
-      <ol>
+      <h3 className="mt-7 mb-3 text-lg leading-snug font-semibold">
+        第3条（利用条件および禁止事項）
+      </h3>
+      <ol className="mb-5 list-outside list-decimal space-y-2 pl-6 marker:font-medium">
         <li>
           利用者は、法令および公序良俗に反しない範囲で本サービスを利用するものとします。
         </li>
         <li>
           利用者は、本サービスの利用にあたり、次の行為を行ってはなりません。
-          <ul>
+          <ul className="marker:text-muted-foreground mt-2 list-outside list-disc space-y-1 pl-5">
             <li>法令または公序良俗に違反する行為</li>
             <li>
               第三者の著作権、肖像権、プライバシーその他の権利または利益を侵害する行為
@@ -53,8 +59,10 @@ export function TermsContent() {
         </li>
       </ol>
 
-      <h3>第4条（画像の権利および利用者の責任）</h3>
-      <ol>
+      <h3 className="mt-7 mb-3 text-lg leading-snug font-semibold">
+        第4条（画像の権利および利用者の責任）
+      </h3>
+      <ol className="mb-5 list-outside list-decimal space-y-2 pl-6 marker:font-medium">
         <li>
           利用者は、選択する画像について、利用および加工に必要な権利を有していること、または必要な許諾を得ていることを確認するものとします。
         </li>
@@ -66,8 +74,10 @@ export function TermsContent() {
         </li>
       </ol>
 
-      <h3>第5条（サービスの変更・中断・終了）</h3>
-      <ol>
+      <h3 className="mt-7 mb-3 text-lg leading-snug font-semibold">
+        第5条（サービスの変更・中断・終了）
+      </h3>
+      <ol className="mb-5 list-outside list-decimal space-y-2 pl-6 marker:font-medium">
         <li>
           運営者は、必要に応じて、本サービスの内容を変更し、または提供を一時中断することがあります。
         </li>
@@ -79,8 +89,10 @@ export function TermsContent() {
         </li>
       </ol>
 
-      <h3>第6条（免責事項）</h3>
-      <ol>
+      <h3 className="mt-7 mb-3 text-lg leading-snug font-semibold">
+        第6条（免責事項）
+      </h3>
+      <ol className="mb-5 list-outside list-decimal space-y-2 pl-6 marker:font-medium">
         <li>
           運営者は、本サービスについて、正確性、完全性、特定の目的への適合性、継続的な提供および不具合が発生しないことを保証しません。
         </li>
@@ -92,8 +104,10 @@ export function TermsContent() {
         </li>
       </ol>
 
-      <h3>第7条（知的財産権）</h3>
-      <ol>
+      <h3 className="mt-7 mb-3 text-lg leading-snug font-semibold">
+        第7条（知的財産権）
+      </h3>
+      <ol className="mb-5 list-outside list-decimal space-y-2 pl-6 marker:font-medium">
         <li>
           本サービスを構成するプログラム、デザイン、ロゴその他のコンテンツに関する知的財産権は、運営者または正当な権利を有する第三者に帰属します。
         </li>
@@ -105,13 +119,17 @@ export function TermsContent() {
         </li>
       </ol>
 
-      <h3>第8条（利用規約の変更）</h3>
-      <p>
+      <h3 className="mt-7 mb-3 text-lg leading-snug font-semibold">
+        第8条（利用規約の変更）
+      </h3>
+      <p className="mb-5">
         運営者は、必要に応じて本規約を変更することがあります。変更後の利用規約は、本サービス上に掲載した時点から適用されるものとします。ただし、法令上、別途の手続きが必要となる場合は、その手続きに従うものとします。
       </p>
 
-      <h3>第9条（準拠法および管轄裁判所）</h3>
-      <ol>
+      <h3 className="mt-7 mb-3 text-lg leading-snug font-semibold">
+        第9条（準拠法および管轄裁判所）
+      </h3>
+      <ol className="mb-2 list-outside list-decimal space-y-2 pl-6 marker:font-medium">
         <li>
           本規約は、日本法に準拠し、日本法に従って解釈されるものとします。
         </li>
