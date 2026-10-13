@@ -38,7 +38,7 @@ export function CanvasSticker({
       width={width}
       height={height}
       draggable
-      onClick={() => {
+      onPointerClick={() => {
         onSelect(sticker.id);
       }}
       onDragEnd={(e) => {
