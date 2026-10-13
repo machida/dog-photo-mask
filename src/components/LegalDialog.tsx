@@ -24,7 +24,9 @@ export function LegalDialog({ title, children }: Props) {
       />
       <DialogContent>
         <DialogHeader>
-          <DialogTitle>{title}</DialogTitle>
+          <DialogTitle className="text-xl leading-snug font-semibold">
+            {title}
+          </DialogTitle>
         </DialogHeader>
         {children}
       </DialogContent>
