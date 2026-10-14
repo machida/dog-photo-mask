@@ -74,6 +74,7 @@ export function StickersLayer({
       <Transformer
         ref={transformerRef}
         rotateEnabled={false}
+        flipEnabled={false}
         anchorSize={8}
         keepRatio
         enabledAnchors={[
