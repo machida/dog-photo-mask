@@ -1,5 +1,5 @@
 import Konva from 'konva';
-import type { Sticker } from '@/sticker/sticker';
+import type { Sticker } from '@/sticker/sticker.ts';
 
 export async function copyCanvas(
   image: HTMLImageElement,

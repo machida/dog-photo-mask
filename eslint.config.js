@@ -28,10 +28,13 @@ export default defineConfig([
         'error',
         'ignorePackages',
         {
-          js: 'always',
-          jsx: 'always',
-          ts: 'always',
-          tsx: 'always',
+          checkTypeImports: true,
+          pattern: {
+            js: 'always',
+            jsx: 'always',
+            ts: 'always',
+            tsx: 'always',
+          },
         },
       ],
       'simple-import-sort/imports': [
