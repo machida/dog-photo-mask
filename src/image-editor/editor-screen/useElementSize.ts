@@ -11,10 +11,12 @@ export function useElementSize<T extends HTMLElement>() {
     const observer = new ResizeObserver(([entry]) => {
       if (!entry) return;
 
-      const { inlineSize, blockSize } = entry.contentBoxSize[0];
+      const contentBoxSize = entry.contentBoxSize[0];
+      if (!contentBoxSize) return;
+
       setSize({
-        width: inlineSize,
-        height: blockSize,
+        width: contentBoxSize.inlineSize,
+        height: contentBoxSize.blockSize,
       });
     });
 

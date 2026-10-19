@@ -33,8 +33,9 @@ export function UploadScreen({ onUpload }: Props) {
   ));
 
   function handleDrop(acceptedFiles: File[], fileRejections: FileRejection[]) {
-    if (acceptedFiles.length === 1 && fileRejections.length === 0) {
-      onUpload(acceptedFiles[0]);
+    const [file] = acceptedFiles;
+    if (file && acceptedFiles.length === 1 && fileRejections.length === 0) {
+      onUpload(file);
     }
   }
 

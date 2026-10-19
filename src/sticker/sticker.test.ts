@@ -29,6 +29,9 @@ describe('createFaceStickers', () => {
     const faces = [{ x: 100, y: 50, width: 90, height: 120 }];
 
     const [sticker] = createFaceStickers(faces);
+    if (!sticker) {
+      throw new Error('Expected a sticker');
+    }
 
     expect(sticker.x).toBe(70);
     expect(sticker.y).toBe(35);
@@ -53,6 +56,9 @@ describe('createFaceStickers', () => {
     const faces = [{ x: 0, y: 0, width: 100, height: 100 }];
 
     const [sticker] = createFaceStickers(faces);
+    if (!sticker) {
+      throw new Error('Expected a sticker');
+    }
 
     expect(sticker.width).toBe(142);
     expect(sticker.height).toBe(142);
@@ -62,6 +68,9 @@ describe('createFaceStickers', () => {
     const faces = [{ x: 0, y: 0, width: 30, height: 50 }];
 
     const [sticker] = createFaceStickers(faces);
+    if (!sticker) {
+      throw new Error('Expected a sticker');
+    }
 
     expect(sticker.x).toBeCloseTo(-14.5);
     expect(sticker.y).toBeCloseTo(-4.5);
