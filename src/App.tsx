@@ -2,7 +2,7 @@ import githubLogoBlack from '@/assets/github-logo-black.svg';
 import githubLogoWhite from '@/assets/github-logo-white.svg';
 import logo from '@/assets/logo.svg';
 import { LegalDialog } from '@/components/LegalDialog.tsx';
-import { Toaster } from '@/components/ui/sonner';
+import { Toaster } from '@/components/ui/sonner.tsx';
 import { ImageEditor } from '@/image-editor/ImageEditor.tsx';
 import { PrivacyPolicyContent } from './PrivacyPolicyContent.tsx';
 import { TermsContent } from './TermsContent.tsx';
