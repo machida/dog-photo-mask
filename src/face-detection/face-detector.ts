@@ -44,17 +44,19 @@ async function createFaceDetector() {
 
 function toFaces(result: FaceDetectorResult): Face[] {
   return result.detections.flatMap((detection) => {
-    const boundingBox = detection.boundingBox;
-    if (boundingBox) {
-      const { originX, originY, width, height } = boundingBox;
-      return {
-        x: originX,
-        y: originY,
-        width,
-        height,
-        score: detection.categories[0].score,
-      };
+    const { boundingBox, categories } = detection;
+    const category = categories[0];
+    if (!boundingBox || !category) {
+      return [];
     }
-    return [];
+
+    const { originX, originY, width, height } = boundingBox;
+    return {
+      x: originX,
+      y: originY,
+      width,
+      height,
+      score: category.score,
+    };
   });
 }

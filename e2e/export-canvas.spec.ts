@@ -40,7 +40,7 @@ test('copies the edited image to the clipboard when the copy button is clicked',
 
   const clipboardItemType = await page.evaluate(async () => {
     const [item] = await navigator.clipboard.read();
-    return item.types[0];
+    return item?.types[0];
   });
 
   expect(clipboardItemType).toBe('image/png');
