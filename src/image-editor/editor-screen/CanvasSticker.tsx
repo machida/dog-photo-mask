@@ -38,6 +38,14 @@ export function CanvasSticker({
       width={width}
       height={height}
       draggable
+      onMouseEnter={(e) => {
+        const stage = e.target.getStage();
+        if (stage) stage.container().style.cursor = 'pointer';
+      }}
+      onMouseLeave={(e) => {
+        const stage = e.target.getStage();
+        if (stage) stage.container().style.cursor = 'default';
+      }}
       onPointerClick={() => {
         onSelect(sticker.id);
       }}
