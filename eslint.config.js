@@ -3,6 +3,7 @@ import eslintReact from '@eslint-react/eslint-plugin';
 import vitest from '@vitest/eslint-plugin';
 import { defineConfig, globalIgnores } from 'eslint/config';
 import prettier from 'eslint-config-prettier';
+import importPlugin from 'eslint-plugin-import';
 import jsxA11y from 'eslint-plugin-jsx-a11y';
 import playwright from 'eslint-plugin-playwright';
 import reactHooks from 'eslint-plugin-react-hooks';
@@ -16,12 +17,26 @@ const configFiles = ['**/*.config.{js,ts}'];
 export default defineConfig([
   globalIgnores(['dist']),
   {
-    files: ['**/*.{js,ts,tsx}'],
+    files: ['**/*.{js,jsx,ts,tsx}'],
     extends: [js.configs.recommended],
     plugins: {
+      import: importPlugin,
       'simple-import-sort': simpleImportSort,
     },
     rules: {
+      'import/extensions': [
+        'error',
+        'ignorePackages',
+        {
+          checkTypeImports: true,
+          pattern: {
+            js: 'always',
+            jsx: 'always',
+            ts: 'always',
+            tsx: 'always',
+          },
+        },
+      ],
       'simple-import-sort/imports': [
         'error',
         {
