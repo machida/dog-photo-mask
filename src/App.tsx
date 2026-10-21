@@ -12,7 +12,7 @@ function App() {
     <>
       <DogPattern />
       <div className="site-column relative mx-auto flex min-h-svh w-full max-w-160 flex-col bg-[#fffaf0]">
-        <Toaster position="top-right" theme="light" />
+        <Toaster position="top-right" theme="light" closeButton />
         <header className="flex items-center justify-center gap-2 px-3 sm:gap-3">
           <img
             className="size-8 shrink-0 -rotate-12 sm:size-12"

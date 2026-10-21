@@ -1,6 +1,6 @@
 import { useEffect, useEffectEvent, useState } from 'react';
 import { Copy, CornerDownLeft, Download, Smile, X } from 'lucide-react';
-import { notify as toast } from '@/components/notify.tsx';
+import { toast } from 'sonner';
 import { Button } from '@/components/ui/button.tsx';
 import type { Face } from '@/face-detection/face-detector.ts';
 import type { Rect } from '@/lib/coordinate.ts';
