@@ -68,13 +68,13 @@ export function UploadScreen({ onUpload }: Props) {
           aria-hidden="true"
         >
           <Camera
-            className="hidden size-12 max-lg:block [@media(pointer:coarse)]:block"
+            className="hidden size-12 max-lg:block pointer-coarse:block"
             strokeWidth={1.75}
           />
           <ImageIcon className="size-12" strokeWidth={1.75} />
         </div>
 
-        <p className="text-sm leading-relaxed max-lg:hidden md:text-base [@media(pointer:coarse)]:hidden">
+        <p className="text-sm leading-relaxed max-lg:hidden md:text-base pointer-coarse:hidden">
           <span className="block">
             <span className="inline-block">ここにファイルを</span>
             <span className="inline-block">ドラッグ&ドロップするか、</span>
@@ -82,7 +82,7 @@ export function UploadScreen({ onUpload }: Props) {
           <span className="inline-block">クリックして</span>
           <span className="inline-block">ファイルを選択してください。</span>
         </p>
-        <p className="hidden text-sm leading-relaxed max-lg:block md:text-base [@media(pointer:coarse)]:block">
+        <p className="hidden text-sm leading-relaxed max-lg:block md:text-base pointer-coarse:block">
           <span className="block">タップして写真を撮影するか、</span>
           <span className="inline-block">写真ライブラリから</span>
           <span className="inline-block">選択してください。</span>
@@ -106,7 +106,7 @@ export function UploadScreen({ onUpload }: Props) {
           <span className="block lg:inline">人の顔はスタンプで隠す。</span>
         </h2>
         <div className="grid items-center gap-5 sm:grid-cols-[180px_1fr] sm:gap-6">
-          <div className="order-2 space-y-3 text-sm leading-7 sm:order-none sm:col-start-2 sm:row-start-1 sm:text-left sm:text-base">
+          <div className="order-2 space-y-3 text-sm leading-7 sm:order-0 sm:col-start-2 sm:row-start-1 sm:text-left sm:text-base">
             <p>
               <span className="block lg:inline">チャットやSNSで</span>
               <span className="block lg:inline">
@@ -128,7 +128,7 @@ export function UploadScreen({ onUpload }: Props) {
             </p>
             <ImagePrivacyDialog />
           </div>
-          <figure className="mx-auto w-[180px] space-y-2 sm:col-start-1 sm:row-start-1">
+          <figure className="mx-auto w-45 space-y-2 sm:col-start-1 sm:row-start-1">
             <div
               className="relative overflow-hidden rounded-xl"
               role="img"
