@@ -1,21 +1,9 @@
-import { useEffect, useRef, useSyncExternalStore } from 'react';
+import { useEffect, useRef } from 'react';
 import { Layer, Transformer } from 'react-konva';
 import Konva from 'konva';
 import type { Rect } from '@/lib/coordinate.ts';
 import type { Sticker } from '@/sticker/sticker.ts';
 import { CanvasSticker } from './CanvasSticker.tsx';
-
-const touchQuery = '(any-pointer: coarse)';
-
-function subscribeToTouchInput(onChange: () => void) {
-  const media = window.matchMedia(touchQuery);
-  media.addEventListener('change', onChange);
-  return () => media.removeEventListener('change', onChange);
-}
-
-function hasTouchInput() {
-  return window.matchMedia(touchQuery).matches;
-}
 
 type Props = {
   image: HTMLImageElement;
@@ -38,11 +26,6 @@ export function StickersLayer({
 }: Props) {
   const transformerRef = useRef<Konva.Transformer>(null);
   const stickersRef = useRef<Map<string, Konva.Image>>(new Map());
-  const isTouchInput = useSyncExternalStore(
-    subscribeToTouchInput,
-    hasTouchInput,
-    () => false,
-  );
 
   function updateTransformer(nodes: Konva.Image[]) {
     const transformer = transformerRef.current;
@@ -92,11 +75,11 @@ export function StickersLayer({
         ref={transformerRef}
         rotateEnabled={false}
         flipEnabled={false}
-        anchorSize={isTouchInput ? 16 : 8}
-        anchorCornerRadius={isTouchInput ? 4 : 0}
+        anchorSize={16}
+        anchorCornerRadius={4}
         anchorStyleFunc={(anchor) => {
-          // Enlarge the invisible hit area to 44px on touch devices.
-          anchor.hitStrokeWidth(isTouchInput ? 28 : 2);
+          // Enlarge the invisible hit area to 44px.
+          anchor.hitStrokeWidth(28);
         }}
         keepRatio
         enabledAnchors={[
