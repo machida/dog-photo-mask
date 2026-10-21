@@ -16,7 +16,7 @@ export function ImagePrivacyDialog() {
             type="button"
             className="w-full rounded-lg bg-[#f5ebd6] px-3 py-2 text-center text-sm leading-relaxed font-semibold text-[#513b2c] transition-colors hover:bg-[#eee0bf] focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#513b2c]"
           >
-            <span className="inline-block">🔒 画像はサーバーに</span>
+            <span className="inline-block">🔒 写真はサーバーに</span>
             <span className="inline-block">
               送信されません。
               <Info
