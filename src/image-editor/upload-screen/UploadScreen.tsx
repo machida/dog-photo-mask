@@ -68,13 +68,13 @@ export function UploadScreen({ onUpload }: Props) {
           aria-hidden="true"
         >
           <Camera
-            className="hidden size-12 max-lg:block pointer-coarse:block"
+            className="hidden size-12 pointer-coarse:block"
             strokeWidth={1.75}
           />
           <ImageIcon className="size-12" strokeWidth={1.75} />
         </div>
 
-        <p className="text-sm leading-relaxed max-lg:hidden md:text-base pointer-coarse:hidden">
+        <p className="text-sm leading-relaxed md:text-base pointer-coarse:hidden">
           <span className="block">
             <span className="inline-block">ここにファイルを</span>
             <span className="inline-block">ドラッグ&ドロップするか、</span>
@@ -82,7 +82,7 @@ export function UploadScreen({ onUpload }: Props) {
           <span className="inline-block">クリックして</span>
           <span className="inline-block">ファイルを選択してください。</span>
         </p>
-        <p className="hidden text-sm leading-relaxed max-lg:block md:text-base pointer-coarse:block">
+        <p className="hidden text-sm leading-relaxed md:text-base pointer-coarse:block">
           <span className="block">タップして写真を撮影するか、</span>
           <span className="inline-block">写真ライブラリから</span>
           <span className="inline-block">選択してください。</span>
